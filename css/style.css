@@ -1,7 +1,22 @@
+:root {
+    --gray: #575655;
+    --gray-light: #656363;
+    --gray-light-two: #81807f;
+    --orange: #ff9f0b;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     border: 0px;
+}
+
+.orange {
+    background: var(--orange);
+}
+
+.gray-light {
+    background: var(--gray-light);
 }
 
 header, #main-wrapper, footer {
@@ -15,10 +30,10 @@ header, #main-wrapper, footer {
 }
 
 .calculator-container {
-    height: 120px;
+    height: 130px;
     width: 100px;
-    background: black;
-
+    background: var(--gray);
+    border: 0.1px solid var(--gray);
 }
 
 .row {
@@ -35,24 +50,50 @@ header, #main-wrapper, footer {
     height: 100%;
 }
 
+.row-one {
+    height: 30px;
+    background: var(--gray);
+}
+
 .row-six .cell:first-child {
     width: 50%;
 }
-
-button {
-    width: 100%;
-    height: 100%;  
-    border: 1px solid black;
+.row-two .cell:first-child {
+    width: 50%;
 }
 
 input {
     text-align: right;
     width: 100%;
     height: 100%;
+    color: rgb(255, 255, 255);
+    background: var(--gray);
+}
+
+input:focus {
+    outline: 1px solid #00bcd4;
+
 }
 
 .input-cell {
     height: 100%;
+}
+
+button {
+    width: 100%;
+    height: 100%;  
+    border: .1px solid var(--gray);
+    font-size: 7px;
+    color: white;
+}
+
+button:focus {
+    outline: 1px solid #00bcd4;
+    transform: scale(1.1);
+}
+
+.number-btn {
+    background: var(--gray-light-two);
 }
 
 a {
